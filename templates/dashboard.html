@@ -1,0 +1,68 @@
+{% extends "layout.html"%}
+{%  block body %}
+  <!-- Page Header -->
+<header class="masthead" style="background-image:url('{{url_for('static',filename='img/admin-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>ADMIN PANAL</h1>
+            <span class="subheading">you can manage your blog</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+         <h1>BASIC ACTIVITY</h1>
+         <a href="/edit/0"><button class="btn btn-primary ">add a new post</button></a>
+         <a href="/logout"><button class="btn btn-primary ">logout</button></a>
+         <hr>
+
+         <h1>UPLOAD A FILE</h1>
+        <form action="/uploader" method="post" enctype="multipart/form-data">
+        <input type="file" name="file1">
+        <button type="submit" class="btn btn-primary" >submit</button>
+        </form>
+         <hr>
+         <h1>Edit Post</h1>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">s.no.</th>
+                <th scope="col">Title</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+                {%for post in post%}
+              <tr>
+                <th scope="row">{{post.serial_number}}</th>
+                <td>{{post.post_heading}}</td>
+                <td><a href="/edit/{{post.serial_number}}"><button class="btn btn-primary ">Edit</button></a></td>
+               
+                <td><a href="/delete/{{post.serial_number}}"><button class="btn btn-primary">Delete</button></a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+         
+        <!-- Pager -->
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+{% endblock %}

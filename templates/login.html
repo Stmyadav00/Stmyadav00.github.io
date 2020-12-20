@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> login to dashboard </title>
+  <link href="{{ url_for('static',filename='css/login.css')}}" rel="stylesheet">
+
+</head>
+<body id="body1">
+
+    <h1 id="heading1">TECHNOGYAN</h1>
+
+    <center><form action="/dashboard" method="post" id="div1">
+        <center> <h2 id="h2">login to Admin panal</h2></center>
+        <input type="text" name="username" placeholder="username" id="name">
+        <!-- for shortcut of tag with id is example-input#tag -->
+    <!-- for shortcut of tag with class is example-input.tag -->
+    <input type="password" name="pass" placeholder="password" id="email">
+
+     <input type="submit" name="submit" class="button1">
+     <input type="reset" name="reset" class="button1">
+        
+    </form></center>
+
+
+</body>
+</html>

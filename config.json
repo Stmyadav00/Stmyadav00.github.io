@@ -1,0 +1,18 @@
+{
+  "params": {
+    "local_server": "True",
+    "blog_name": "TechnoGyan",
+    "tag_line": "A blog liked by programmer",
+    "local_uri": "mysql://root:@localhost/the lengends",
+    "prod_uri": "mysql://root:@localhost/the legends",
+    "ig_url": "https://www.instagram.com/satyam_yadav09/",
+    "fb_url": "https://www.facebook.com/satyam yaduvanshi/",
+    "gh_url": "https://www.github.com/stmyadav00/",
+    "gmail_username": "example@gmail.com",
+    "gmail_password": "password",
+     "number_of_post": "2",
+    "username":"TechnoGyan",
+    "password":"Technical",
+    "uploader_location": "C:\\Users\\HP\\PycharmProjects\\pythonProject\\static"
+  }
+}
